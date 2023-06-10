@@ -1,20 +1,32 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <ion-input label="NIK" labelPlacement="floating" type="number" [(ngModel)]="form.nik"></ion-input>
+    <br>
+    <ion-input label="nama" labelPlacement="floating" [(ngModel)]="form.nama"></ion-input>
+    <br>
+    <ion-input label="alamat" labelPlacement="floating" [(ngModel)]="form.alamat" ></ion-input>
+    <br>
+    <ion-input label="Rt" type="number" labelPlacement="floating" [(ngModel)]="form.rt"></ion-input>
+    <br>
+    <ion-input label="Rw" type="number" labelPlacement="floating"[(ngModel)]="form.rw" ></ion-input>
+    <br>
+    <ion-input label="Kel/Desa" labelPlacement="floating" [(ngModel)]="form.kel"></ion-input>
+    <br>
+    <ion-input label="Kecamatan" labelPlacement="floating" [(ngModel)]="form.kec"></ion-input>
+    <br>
+    <ion-datetime-button datetime="date"></ion-datetime-button>
+    
+    
+    <ion-button (click)="sendToWhatssapp()">Direct Message To Whatsapp</ion-button>
+    <ion-button (click)="sendToTelegram()">Direct Message To Telegram</ion-button>
+    <ion-button (click)="sendToEmail()">Direct Message To Email</ion-button>
   </div>
 </ion-content>
